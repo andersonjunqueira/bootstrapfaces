@@ -25,7 +25,7 @@ import com.sun.faces.renderkit.html_basic.SelectManyCheckboxListRenderer;
 import com.sun.faces.util.RequestStateManager;
 import com.sun.faces.util.Util;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.selectManyCheckbox", componentFamily="ctis.bootstrapfaces.family.selectManyCheckbox")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.selectManyCheckbox", componentFamily="neotech.bootstrapfaces.family.selectManyCheckbox")
 public class UISelectManyCheckboxRenderer extends SelectManyCheckboxListRenderer {
 
     private static final Attribute[] ATTRIBUTES = AttributeManager.getAttributes(AttributeManager.Key.SELECTMANYCHECKBOX);

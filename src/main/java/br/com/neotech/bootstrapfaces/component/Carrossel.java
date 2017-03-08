@@ -5,7 +5,7 @@ import java.util.List;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 
-@FacesComponent(value = "ctis.bootstrapfaces.carrossel")
+@FacesComponent(value = "neotech.bootstrapfaces.carrossel")
 public class Carrossel extends UINamingContainer {
 
     public enum BSPropertyKeys {

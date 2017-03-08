@@ -3,7 +3,7 @@ package br.com.neotech.bootstrapfaces.component;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 
-@FacesComponent(value = "ctis.bootstrapfaces.fieldset")
+@FacesComponent(value = "neotech.bootstrapfaces.fieldset")
 public class Fieldset extends UINamingContainer {
 
     //TODO [BOOTSTRAPFACES] ADICIONAR O ENDEREÇO PADRÃO DO MANUAL PARA CONCATENAÇÃO NO LINK DO HELP

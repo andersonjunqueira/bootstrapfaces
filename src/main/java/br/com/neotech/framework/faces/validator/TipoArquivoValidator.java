@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.tipoArquivo")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.tipoArquivo")
 public class TipoArquivoValidator implements Validator {
 
     @Getter @Setter

@@ -3,7 +3,7 @@ package br.com.neotech.bootstrapfaces.component;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 
-@FacesComponent(value = "ctis.bootstrapfaces.menuprofile")
+@FacesComponent(value = "neotech.bootstrapfaces.menuprofile")
 public class MenuProfile extends UINamingContainer {
 
     enum PropertyKeys {

@@ -13,7 +13,7 @@ import br.com.neotech.framework.faces.Mensagens;
 import br.com.neotech.framework.util.ValidatorUtil;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.cep")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.cep")
 public class CEPValidator implements Validator {
 
     @Override

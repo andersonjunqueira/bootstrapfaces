@@ -9,10 +9,10 @@ import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 import br.com.neotech.framework.faces.Mensagens;
 
-@FacesComponent(value = "ctis.bootstrapfaces.chosenMultiple")
+@FacesComponent(value = "neotech.bootstrapfaces.chosenMultiple")
 public class ChosenMultiple extends HtmlSelectManyListbox implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.select";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.select";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, initScript, hint, tooltipPosition, multiple

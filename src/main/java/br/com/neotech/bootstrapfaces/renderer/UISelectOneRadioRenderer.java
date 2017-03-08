@@ -24,7 +24,7 @@ import com.sun.faces.util.RequestStateManager;
 
 import br.com.neotech.bootstrapfaces.component.IFormControl;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.selectOneRadio", componentFamily="ctis.bootstrapfaces.family.selectOneRadio")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.selectOneRadio", componentFamily="neotech.bootstrapfaces.family.selectOneRadio")
 public class UISelectOneRadioRenderer extends RadioRenderer {
 
     private static final Attribute[] ATTRIBUTES = AttributeManager.getAttributes(AttributeManager.Key.SELECTONERADIO);

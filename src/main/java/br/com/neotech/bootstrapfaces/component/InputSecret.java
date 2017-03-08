@@ -8,10 +8,10 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputSecret")
+@FacesComponent(value = "neotech.bootstrapfaces.inputSecret")
 public class InputSecret extends HtmlInputSecret implements IFormAppendable {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.inputText";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.inputText";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, tooltipPosition, placeholder, prepend, append, initScript, hint

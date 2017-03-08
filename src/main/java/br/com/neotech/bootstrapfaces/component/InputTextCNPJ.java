@@ -6,7 +6,7 @@ import javax.faces.convert.Converter;
 import br.com.neotech.framework.faces.converter.CNPJConverter;
 import br.com.neotech.framework.faces.validator.CNPJValidator;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextCNPJ")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextCNPJ")
 public class InputTextCNPJ extends InputTextMask {
 
     public InputTextCNPJ() {

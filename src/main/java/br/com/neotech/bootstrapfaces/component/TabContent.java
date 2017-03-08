@@ -2,7 +2,7 @@ package br.com.neotech.bootstrapfaces.component;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 
-@FacesComponent("ctis.bootstrapfaces.tabContent")
+@FacesComponent("neotech.bootstrapfaces.tabContent")
 public class TabContent extends UINamingContainer {
 
     enum PropertyKeys {

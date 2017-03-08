@@ -7,7 +7,7 @@
 
     <description>Biblioteca de componentes JSF customizados com o Twitter Bootstrap.</description>
 
-    <namespace>http://www.ctis.com.br/bootstrapfaces</namespace>
+    <namespace>http://www.neotech.com.br/bootstrapfaces</namespace>
     <composite-library-name>bootstrapfaces</composite-library-name>
 
     
@@ -90,8 +90,8 @@
         ]]></description>
         <tag-name>form</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.form</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.form</renderer-type>
+            <component-type>neotech.bootstrapfaces.form</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.form</renderer-type>
         </component>
 
         <!-- ATRIBUTOS HTMLFORM -->
@@ -380,8 +380,8 @@
         ]]></description>
         <tag-name>inputText</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputText</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputText</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -866,8 +866,8 @@
         ]]></description>
         <tag-name>inputSecret</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputSecret</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputSecret</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -1352,8 +1352,8 @@
         ]]></description>
         <tag-name>inputTextMask</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextMask</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextMask</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -1848,8 +1848,8 @@
         ]]></description>
         <tag-name>inputTextCPF</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextCPF</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextCPF</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -2344,8 +2344,8 @@
         ]]></description>
         <tag-name>inputTextProcesso</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextProcesso</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextProcesso</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -2840,8 +2840,8 @@
         ]]></description>
         <tag-name>inputTextCNPJ</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextCNPJ</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextCNPJ</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -3336,8 +3336,8 @@
         ]]></description>
         <tag-name>inputTextCNARH</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextCNARH</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextCNARH</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -3832,8 +3832,8 @@
         ]]></description>
         <tag-name>inputTextCEP</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextCEP</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextCEP</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -4328,8 +4328,8 @@
         ]]></description>
         <tag-name>inputTextEmail</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextEmail</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextEmail</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -4808,8 +4808,8 @@
         ]]></description>
         <tag-name>inputFile</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputFile</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputFile</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputFile</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputFile</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -5246,8 +5246,8 @@
         ]]></description>
         <tag-name>staticText</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.staticText</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.staticText</renderer-type>
+            <component-type>neotech.bootstrapfaces.staticText</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.staticText</renderer-type>
         </component>
 
         <attribute>
@@ -5401,8 +5401,8 @@
         ]]></description>
         <tag-name>formControl</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.formControl</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.formControl</renderer-type>
+            <component-type>neotech.bootstrapfaces.formControl</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.formControl</renderer-type>
         </component>
 
         <attribute>
@@ -5490,8 +5490,8 @@
         ]]></description>
         <tag-name>inputTextArea</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextarea</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputTextarea</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextarea</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputTextarea</renderer-type>
         </component>
 
         <attribute>
@@ -5929,8 +5929,8 @@
         ]]></description>
         <tag-name>inputTextPhone</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextPhone</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextPhone</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -6415,8 +6415,8 @@
         ]]></description>
         <tag-name>inputTextDate</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextDate</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextDate</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -6914,8 +6914,8 @@
         ]]></description>
         <tag-name>inputTextNumber</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.inputTextNumber</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.inputText</renderer-type>
+            <component-type>neotech.bootstrapfaces.inputTextNumber</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.inputText</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -7447,8 +7447,8 @@
         ]]></description>
         <tag-name>selectBooleanCheckbox</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.selectBooleanCheckbox</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectBooleanCheckbox</renderer-type>
+            <component-type>neotech.bootstrapfaces.selectBooleanCheckbox</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectBooleanCheckbox</renderer-type>
         </component>
 
         <attribute>
@@ -7939,8 +7939,8 @@
         ]]></description>
         <tag-name>selectManyCheckbox</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.selectManyCheckbox</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectManyCheckbox</renderer-type>
+            <component-type>neotech.bootstrapfaces.selectManyCheckbox</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectManyCheckbox</renderer-type>
         </component>
 
         <!-- ATRIBUTOS JSF -->
@@ -8478,8 +8478,8 @@
         ]]></description>
         <tag-name>selectOneRadio</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.selectOneRadio</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectOneRadio</renderer-type>
+            <component-type>neotech.bootstrapfaces.selectOneRadio</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectOneRadio</renderer-type>
         </component>
 
         <!-- ATRIBUTOS UICOMPONENTBASE -->
@@ -8968,8 +8968,8 @@
         ]]></description>
         <tag-name>selectOneMenu</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.selectOneMenu</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectMenu</renderer-type>
+            <component-type>neotech.bootstrapfaces.selectOneMenu</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectMenu</renderer-type>
         </component>
 
         <attribute>
@@ -9438,8 +9438,8 @@
         ]]></description>
         <tag-name>checkbox</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.selectBooleanCheckbox</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectBooleanCheckbox</renderer-type>
+            <component-type>neotech.bootstrapfaces.selectBooleanCheckbox</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectBooleanCheckbox</renderer-type>
         </component>
 
         <attribute>
@@ -9867,8 +9867,8 @@
         ]]></description>
         <tag-name>select</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.selectOneMenu</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectMenu</renderer-type>
+            <component-type>neotech.bootstrapfaces.selectOneMenu</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectMenu</renderer-type>
         </component>
 
         <attribute>
@@ -10311,8 +10311,8 @@
         ]]></description>
         <tag-name>chosen</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.chosen</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectMenu</renderer-type>
+            <component-type>neotech.bootstrapfaces.chosen</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectMenu</renderer-type>
         </component>
 
         <attribute>
@@ -10755,8 +10755,8 @@
         ]]></description>
         <tag-name>chosenMultiple</tag-name>
         <component>
-            <component-type>ctis.bootstrapfaces.chosenMultiple</component-type>
-            <renderer-type>ctis.bootstrapfaces.renderer.selectMenu</renderer-type>
+            <component-type>neotech.bootstrapfaces.chosenMultiple</component-type>
+            <renderer-type>neotech.bootstrapfaces.renderer.selectMenu</renderer-type>
         </component>
 
         <attribute>
@@ -11202,7 +11202,7 @@
 <tag>
     <tag-name>zeroFillerConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.zeroFiller</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.zeroFiller</converter-id>
     </converter>
     <attribute>
         <name>minIntegerDigits</name>
@@ -11211,98 +11211,98 @@
 <tag>
     <tag-name>cpfConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.cpf</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.cpf</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>cnpjConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.cnpj</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.cnpj</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>cnarhConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.cnarh</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.cnarh</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>cepConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.cep</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.cep</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>telefoneConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.telefone</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.telefone</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>booleanConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.boolean</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.boolean</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>decimalConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.decimal</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.decimal</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>cpfCnpjConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.cpfcnpj</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.cpfcnpj</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>numeroProcessoConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.numeroprocesso</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.numeroprocesso</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>numeroResolucaoConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.resolucao</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.resolucao</converter-id>
     </converter>
 </tag>
 <tag>
     <tag-name>entityConverter</tag-name>
     <converter>
-        <converter-id>br.com.ctis.bootstrapfaces.converter.entity</converter-id>
+        <converter-id>br.com.neotech.bootstrapfaces.converter.entity</converter-id>
     </converter>
 </tag>
 
 <tag>
     <tag-name>cpfValidator</tag-name>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.cpf</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.cpf</validator-id>
     </validator>
 </tag>
 <tag>
     <tag-name>cnpjValidator</tag-name>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.cnpj</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.cnpj</validator-id>
     </validator>
 </tag>
 <tag>
     <tag-name>cnarhValidator</tag-name>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.cnarh</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.cnarh</validator-id>
     </validator>
 </tag>
 <tag>
     <tag-name>emailValidator</tag-name>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.email</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.email</validator-id>
     </validator>
 </tag>
 <tag>
     <tag-name>requiredCheckboxValidator</tag-name>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.requiredCheckbox</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.requiredCheckbox</validator-id>
     </validator>
 </tag>
 <tag>
@@ -11315,7 +11315,7 @@
         <type>java.lang.String</type>
     </attribute>   
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.tipoArquivo</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.tipoArquivo</validator-id>
     </validator>
 </tag>
 <tag>
@@ -11328,21 +11328,21 @@
         <type>java.lang.Long</type>
     </attribute>        
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.tamanhoArquivo</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.tamanhoArquivo</validator-id>
     </validator>
 </tag>
 <tag>
     <tag-name>cepValidator</tag-name>
     <description>Verifica se o CEP estã dentro dos padrões exigidos.</description>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.cep</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.cep</validator-id>
     </validator>
 </tag>
 <tag>
     <tag-name>telefoneValidator</tag-name>
     <description>Verifica se o Telefone estã dentro dos padrões exigidos.</description>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.telefone</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.telefone</validator-id>
     </validator>
 </tag>
 <tag>
@@ -11355,7 +11355,7 @@
         <type>java.lang.Long</type>
     </attribute>
     <validator>
-        <validator-id>br.com.ctis.bootstrapfaces.validator.tamanhoTextArea</validator-id>
+        <validator-id>br.com.neotech.bootstrapfaces.validator.tamanhoTextArea</validator-id>
     </validator>
 </tag>
 

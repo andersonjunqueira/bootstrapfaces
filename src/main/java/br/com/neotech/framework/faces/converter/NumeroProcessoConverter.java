@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import br.com.neotech.framework.util.ConverterUtil;
 
-@FacesConverter("br.com.ctis.bootstrapfaces.converter.numeroprocesso")
+@FacesConverter("br.com.neotech.bootstrapfaces.converter.numeroprocesso")
 public class NumeroProcessoConverter implements Converter {
 
     @Override

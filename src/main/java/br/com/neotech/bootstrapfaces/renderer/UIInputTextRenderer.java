@@ -15,7 +15,7 @@ import com.sun.faces.renderkit.Attribute;
 import com.sun.faces.renderkit.AttributeManager;
 import com.sun.faces.renderkit.RenderKitUtils;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.inputText", componentFamily="ctis.bootstrapfaces.family.inputText")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.inputText", componentFamily="neotech.bootstrapfaces.family.inputText")
 public class UIInputTextRenderer extends BasicInputRenderer {
 
     private static final Attribute[] INPUT_ATTRIBUTES = AttributeManager.getAttributes(AttributeManager.Key.INPUTTEXT);

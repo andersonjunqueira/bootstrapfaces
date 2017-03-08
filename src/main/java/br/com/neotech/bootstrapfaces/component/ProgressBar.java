@@ -2,7 +2,7 @@ package br.com.neotech.bootstrapfaces.component;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 
-@FacesComponent("ctis.bootstrapfaces.progressBar")
+@FacesComponent("neotech.bootstrapfaces.progressBar")
 public class ProgressBar extends UINamingContainer {
 
     enum PropertyKeys {

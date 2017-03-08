@@ -8,10 +8,10 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 
-@FacesComponent(value = "ctis.bootstrapfaces.selectManyCheckbox")
+@FacesComponent(value = "neotech.bootstrapfaces.selectManyCheckbox")
 public class SelectManyCheckbox extends HtmlSelectManyCheckbox implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.selectManyCheckbox";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.selectManyCheckbox";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, initScript, hint

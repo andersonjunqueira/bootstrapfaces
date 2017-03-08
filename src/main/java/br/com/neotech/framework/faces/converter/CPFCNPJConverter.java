@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.framework.util.ConverterUtil;
 
 
-@FacesConverter("br.com.ctis.bootstrapfaces.converter.cpfcnpj")
+@FacesConverter("br.com.neotech.bootstrapfaces.converter.cpfcnpj")
 public class CPFCNPJConverter implements Converter {
 
     @Override

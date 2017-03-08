@@ -2,10 +2,10 @@ package br.com.neotech.bootstrapfaces.component;
 
 import javax.faces.component.FacesComponent;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextMask")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextMask")
 public class InputTextMask extends InputText {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.inputText";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.inputText";
 
     public enum BSPropertyKeys {
         mask, placeholder

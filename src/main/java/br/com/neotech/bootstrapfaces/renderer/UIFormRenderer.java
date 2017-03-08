@@ -12,7 +12,7 @@ import com.sun.faces.renderkit.html_basic.FormRenderer;
 
 import br.com.neotech.bootstrapfaces.component.Form;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.form", componentFamily="ctis.bootstrapfaces.family.form")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.form", componentFamily="neotech.bootstrapfaces.family.form")
 public class UIFormRenderer extends FormRenderer {
 
     @Override

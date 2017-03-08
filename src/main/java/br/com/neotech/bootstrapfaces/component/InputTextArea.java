@@ -8,10 +8,10 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextarea")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextarea")
 public class InputTextArea extends HtmlInputTextarea implements IFormControl{
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.inputTextarea";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.inputTextarea";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, tooltipPosition, placeholder, initScript, hint, rows

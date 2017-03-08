@@ -11,7 +11,7 @@ import br.com.neotech.framework.faces.Mensagens;
 import br.com.neotech.framework.util.ValidatorUtil;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.cnarh")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.cnarh")
 public class CNARHValidator implements Validator {
 
     @Override

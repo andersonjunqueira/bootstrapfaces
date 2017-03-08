@@ -11,7 +11,7 @@ import br.com.neotech.framework.faces.Mensagens;
 import br.com.neotech.framework.util.ValidatorUtil;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.email")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.email")
 public class EmailValidator implements Validator {
 
     @Override

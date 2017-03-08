@@ -8,10 +8,10 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputFile")
+@FacesComponent(value = "neotech.bootstrapfaces.inputFile")
 public class InputFile extends HtmlInputText implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.inputFile";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.inputFile";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, tooltipPosition, placeholder, initScript, hint

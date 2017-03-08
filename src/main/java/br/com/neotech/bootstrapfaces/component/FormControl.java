@@ -8,10 +8,10 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 
-@FacesComponent(value = "ctis.bootstrapfaces.formControl")
+@FacesComponent(value = "neotech.bootstrapfaces.formControl")
 public class FormControl extends UIComponentBase implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.formControl";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.formControl";
 
     public enum BSPropertyKeys {
         forAttribute, formLayout, showLabel, inputSize, labelSize, styleClass, label, hint, tooltipPosition, initScript,

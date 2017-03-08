@@ -7,7 +7,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 import javax.faces.render.FacesRenderer;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.staticText", componentFamily="ctis.bootstrapfaces.family.staticText")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.staticText", componentFamily="neotech.bootstrapfaces.family.staticText")
 public class UIStaticTextRenderer extends BasicInputRenderer {
 
     @Override

@@ -15,7 +15,7 @@ import com.sun.faces.renderkit.Attribute;
 import com.sun.faces.renderkit.AttributeManager;
 import com.sun.faces.renderkit.RenderKitUtils;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.selectMenu", componentFamily="ctis.bootstrapfaces.family.select")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.selectMenu", componentFamily="neotech.bootstrapfaces.family.select")
 public class UIMenuRenderer extends BasicMenuRenderer {
 
     private static final Attribute[] ATTRIBUTES = AttributeManager.getAttributes(AttributeManager.Key.SELECTMANYMENU);

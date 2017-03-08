@@ -6,7 +6,7 @@ import javax.faces.component.UINamingContainer;
 
 import br.com.neotech.framework.lazy.PaginatedList;
 
-@FacesComponent("ctis.bootstrapfaces.crudtable")
+@FacesComponent("neotech.bootstrapfaces.crudtable")
 public class CrudTable extends UINamingContainer {
 
     enum PropertyKeys {

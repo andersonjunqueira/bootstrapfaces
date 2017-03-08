@@ -9,7 +9,7 @@ import com.sun.faces.renderkit.Attribute;
 import com.sun.faces.renderkit.AttributeManager;
 import com.sun.faces.renderkit.RenderKitUtils;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.inputTextarea", componentFamily="ctis.bootstrapfaces.family.inputTextarea")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.inputTextarea", componentFamily="neotech.bootstrapfaces.family.inputTextarea")
 public class UIInputTextAreaRenderer extends BasicInputRenderer {
 
     private static final Attribute[] ATTRIBUTES = AttributeManager.getAttributes(AttributeManager.Key.INPUTTEXTAREA);

@@ -10,7 +10,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
-@FacesConverter(value = "br.com.ctis.bootstrapfaces.converter.entity")
+@FacesConverter(value = "br.com.neotech.bootstrapfaces.converter.entity")
 public class EntityConverter implements Converter {
 
     private static final String KEY = "entityConverter";

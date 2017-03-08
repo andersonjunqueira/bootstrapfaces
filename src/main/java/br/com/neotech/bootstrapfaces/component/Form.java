@@ -3,10 +3,10 @@ package br.com.neotech.bootstrapfaces.component;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.html.HtmlForm;
 
-@FacesComponent(value = "ctis.bootstrapfaces.form")
+@FacesComponent(value = "neotech.bootstrapfaces.form")
 public class Form extends HtmlForm {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.form";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.form";
 
     public enum BSPropertyKeys {
         formLayout, showMessages, globalOnly, showHint

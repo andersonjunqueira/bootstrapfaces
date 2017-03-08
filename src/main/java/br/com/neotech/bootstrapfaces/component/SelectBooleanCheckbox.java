@@ -8,10 +8,10 @@ import org.apache.commons.lang3.StringUtils;
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 
-@FacesComponent(value = "ctis.bootstrapfaces.selectBooleanCheckbox")
+@FacesComponent(value = "neotech.bootstrapfaces.selectBooleanCheckbox")
 public class SelectBooleanCheckbox extends HtmlSelectBooleanCheckbox implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.selectBooleanCheckbox";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.selectBooleanCheckbox";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, tooltipPosition, initScript, hint

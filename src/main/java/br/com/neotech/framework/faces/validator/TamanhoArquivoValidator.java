@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.tamanhoArquivo")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.tamanhoArquivo")
 public class TamanhoArquivoValidator implements Validator {
 
     @Getter @Setter

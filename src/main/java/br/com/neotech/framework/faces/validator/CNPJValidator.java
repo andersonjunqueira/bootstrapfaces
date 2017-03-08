@@ -11,7 +11,7 @@ import br.com.neotech.framework.faces.Mensagens;
 import br.com.neotech.framework.util.ValidatorUtil;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.cnpj")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.cnpj")
 public class CNPJValidator implements Validator {
 
     @Override

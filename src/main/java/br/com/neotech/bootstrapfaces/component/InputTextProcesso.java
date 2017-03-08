@@ -5,7 +5,7 @@ import javax.faces.convert.Converter;
 
 import br.com.neotech.framework.faces.converter.NumeroProcessoConverter;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextProcesso")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextProcesso")
 public class InputTextProcesso extends InputTextMask {
 
     public InputTextProcesso() {

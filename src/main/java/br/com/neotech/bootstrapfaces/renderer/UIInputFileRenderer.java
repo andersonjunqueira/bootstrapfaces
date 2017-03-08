@@ -24,7 +24,7 @@ import br.com.neotech.framework.faces.upload.MultipartRequest;
  * @link http://balusc.blogspot.com/2009/12/uploading-files-with-jsf-20-and-
  *       servlet.html
  */
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.inputFile", componentFamily="ctis.bootstrapfaces.family.inputFile")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.inputFile", componentFamily="neotech.bootstrapfaces.family.inputFile")
 public class UIInputFileRenderer extends BasicInputRenderer {
 
     // Constants

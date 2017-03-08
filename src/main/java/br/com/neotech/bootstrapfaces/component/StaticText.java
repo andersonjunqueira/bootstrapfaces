@@ -5,10 +5,10 @@ import javax.faces.component.html.HtmlOutputText;
 
 import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 
-@FacesComponent(value = "ctis.bootstrapfaces.staticText")
+@FacesComponent(value = "neotech.bootstrapfaces.staticText")
 public class StaticText extends HtmlOutputText implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.staticText";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.staticText";
 
     public enum BSPropertyKeys {
         label, formLayout, inputSize, labelSize, hint, tooltipPosition, initScript, showLabel

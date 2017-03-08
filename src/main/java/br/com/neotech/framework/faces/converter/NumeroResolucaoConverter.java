@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import br.com.neotech.framework.util.ConverterUtil;
 
-@FacesConverter("br.com.ctis.bootstrapfaces.converter.resolucao")
+@FacesConverter("br.com.neotech.bootstrapfaces.converter.resolucao")
 public class NumeroResolucaoConverter implements Converter {
 
     @Override

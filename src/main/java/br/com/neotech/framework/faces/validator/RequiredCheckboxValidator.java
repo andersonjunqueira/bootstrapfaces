@@ -7,7 +7,7 @@ import javax.faces.validator.*;
 
 import br.com.neotech.framework.faces.Mensagens;
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.requiredCheckbox")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.requiredCheckbox")
 public class RequiredCheckboxValidator implements Validator {
 
     @Override

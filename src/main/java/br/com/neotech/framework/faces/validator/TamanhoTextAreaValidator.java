@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.tamanhoTextArea")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.tamanhoTextArea")
 public class TamanhoTextAreaValidator implements Validator {
 
     @Getter @Setter

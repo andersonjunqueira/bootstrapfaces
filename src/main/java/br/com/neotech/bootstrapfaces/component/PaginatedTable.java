@@ -8,7 +8,7 @@ import javax.faces.component.UINamingContainer;
 
 import br.com.neotech.framework.lazy.PaginatedList;
 
-@FacesComponent("ctis.bootstrapfaces.paginatedtable")
+@FacesComponent("neotech.bootstrapfaces.paginatedtable")
 public class PaginatedTable extends UINamingContainer {
 
     enum PropertyKeys {

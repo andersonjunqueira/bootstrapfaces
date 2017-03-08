@@ -14,7 +14,7 @@ import br.com.neotech.bootstrapfaces.component.IFormControl;
 
 import com.sun.faces.renderkit.html_basic.CheckboxRenderer;
 
-@FacesRenderer(rendererType="ctis.bootstrapfaces.renderer.selectBooleanCheckbox", componentFamily="ctis.bootstrapfaces.family.selectBooleanCheckbox")
+@FacesRenderer(rendererType="neotech.bootstrapfaces.renderer.selectBooleanCheckbox", componentFamily="neotech.bootstrapfaces.family.selectBooleanCheckbox")
 public class UISelectBooleanCheckboxRenderer extends CheckboxRenderer {
 
     @Override

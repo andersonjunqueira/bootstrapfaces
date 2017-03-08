@@ -6,7 +6,7 @@ import javax.faces.convert.Converter;
 import br.com.neotech.framework.faces.converter.CEPConverter;
 import br.com.neotech.framework.faces.validator.CEPValidator;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextCEP")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextCEP")
 public class InputTextCEP extends InputTextMask {
 
     public InputTextCEP() {

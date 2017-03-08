@@ -6,7 +6,7 @@ import javax.faces.convert.Converter;
 import br.com.neotech.framework.faces.converter.CPFConverter;
 import br.com.neotech.framework.faces.validator.CPFValidator;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextCPF")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextCPF")
 public class InputTextCPF extends InputTextMask {
 
     public InputTextCPF() {

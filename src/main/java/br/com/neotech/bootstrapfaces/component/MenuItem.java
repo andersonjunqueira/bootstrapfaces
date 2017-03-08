@@ -8,7 +8,7 @@ import javax.faces.event.ActionEvent;
 import br.com.neotech.framework.faces.AbstractMB;
 import br.com.neotech.framework.faces.controle.ControleViewMB;
 
-@FacesComponent(value = "ctis.bootstrapfaces.menuitem")
+@FacesComponent(value = "neotech.bootstrapfaces.menuitem")
 public class MenuItem extends UINamingContainer {
 
     public enum PropertyKeys {

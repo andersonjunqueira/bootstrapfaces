@@ -2,7 +2,7 @@ package br.com.neotech.bootstrapfaces.component;
 
 import javax.faces.component.FacesComponent;
 
-@FacesComponent(value = "ctis.bootstrapfaces.breadcrumbItem")
+@FacesComponent(value = "neotech.bootstrapfaces.breadcrumbItem")
 public class BreadcrumbItem extends MenuItem {
 
     public enum PropertyKeys {

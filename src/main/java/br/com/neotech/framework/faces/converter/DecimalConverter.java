@@ -18,7 +18,7 @@ import br.com.neotech.bootstrapfaces.component.InputTextNumber;
 import br.com.neotech.framework.faces.Mensagens;
 
 
-@FacesConverter("br.com.ctis.bootstrapfaces.converter.decimal")
+@FacesConverter("br.com.neotech.bootstrapfaces.converter.decimal")
 public class DecimalConverter implements Converter {
 
     @Override

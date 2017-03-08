@@ -10,7 +10,7 @@ import javax.faces.context.FacesContext;
 
 import br.com.neotech.framework.faces.converter.DecimalConverter;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextNumber")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextNumber")
 public class InputTextNumber extends InputText {
 
     public enum BSPropertyKeys {

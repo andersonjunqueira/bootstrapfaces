@@ -13,7 +13,7 @@ import br.com.neotech.framework.faces.Mensagens;
 import br.com.neotech.framework.util.ValidatorUtil;
 
 
-@FacesValidator("br.com.ctis.bootstrapfaces.validator.cpf")
+@FacesValidator("br.com.neotech.bootstrapfaces.validator.cpf")
 public class CPFValidator implements Validator {
 
     @Override

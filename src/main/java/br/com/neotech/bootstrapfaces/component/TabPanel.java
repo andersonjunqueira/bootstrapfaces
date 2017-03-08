@@ -8,7 +8,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.component.UINamingContainer;
 import javax.faces.context.FacesContext;
 
-@FacesComponent("ctis.bootstrapfaces.tabPanel")
+@FacesComponent("neotech.bootstrapfaces.tabPanel")
 public class TabPanel extends UINamingContainer {
 
     enum PropertyKeys {

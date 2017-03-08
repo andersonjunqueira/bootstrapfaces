@@ -4,7 +4,7 @@ import javax.faces.component.FacesComponent;
 
 import br.com.neotech.framework.faces.validator.EmailValidator;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextEmail")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextEmail")
 public class InputTextEmail extends InputText {
 
     public InputTextEmail() {

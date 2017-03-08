@@ -3,7 +3,7 @@ package br.com.neotech.bootstrapfaces.component;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 
-@FacesComponent(value = "ctis.bootstrapfaces.pagetitle")
+@FacesComponent(value = "neotech.bootstrapfaces.pagetitle")
 public class PageTitle extends UINamingContainer {
 
     enum PropertyKeys {

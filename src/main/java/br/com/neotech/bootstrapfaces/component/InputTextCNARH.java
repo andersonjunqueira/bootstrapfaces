@@ -6,7 +6,7 @@ import javax.faces.convert.Converter;
 import br.com.neotech.framework.faces.converter.CNARHConverter;
 import br.com.neotech.framework.faces.validator.CNARHValidator;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextCNARH")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextCNARH")
 public class InputTextCNARH extends InputTextMask {
 
     public InputTextCNARH() {

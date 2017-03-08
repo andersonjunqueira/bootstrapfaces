@@ -6,10 +6,10 @@ import javax.faces.convert.Converter;
 import br.com.neotech.framework.faces.converter.TelefoneConverter;
 import br.com.neotech.framework.faces.validator.TelefoneValidator;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextPhone")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextPhone")
 public class InputTextPhone extends InputText {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.inputText";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.inputText";
 
     public InputTextPhone() {
         addValidator(new TelefoneValidator());

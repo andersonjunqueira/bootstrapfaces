@@ -9,10 +9,10 @@ import br.com.neotech.bootstrapfaces.renderer.RendererUtil;
 import br.com.neotech.framework.faces.FaceletsFunctions;
 import br.com.neotech.framework.faces.Mensagens;
 
-@FacesComponent(value = "ctis.bootstrapfaces.chosen")
+@FacesComponent(value = "neotech.bootstrapfaces.chosen")
 public class Chosen extends HtmlSelectOneMenu implements IFormControl {
 
-    public static final String COMPONENT_FAMILY = "ctis.bootstrapfaces.family.select";
+    public static final String COMPONENT_FAMILY = "neotech.bootstrapfaces.family.select";
 
     public enum BSPropertyKeys {
         formLayout, showLabel, inputSize, labelSize, initScript, hint, tooltipPosition, multiple

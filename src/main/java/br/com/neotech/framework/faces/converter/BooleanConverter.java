@@ -8,7 +8,7 @@ import javax.faces.convert.FacesConverter;
 import org.apache.commons.lang3.StringUtils;
 
 
-@FacesConverter("br.com.ctis.bootstrapfaces.converter.boolean")
+@FacesConverter("br.com.neotech.bootstrapfaces.converter.boolean")
 public class BooleanConverter implements Converter {
 
     @Override

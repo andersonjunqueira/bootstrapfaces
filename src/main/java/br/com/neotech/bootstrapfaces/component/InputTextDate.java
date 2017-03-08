@@ -10,7 +10,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.DateTimeConverter;
 
-@FacesComponent(value = "ctis.bootstrapfaces.inputTextDate")
+@FacesComponent(value = "neotech.bootstrapfaces.inputTextDate")
 public class InputTextDate extends InputText {
 
     public enum BSPropertyKeys {
