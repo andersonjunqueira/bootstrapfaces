@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface componentType="ctis.bootstrapfaces.menuitem"
+    shortDescription="Agrupador de itens de menu.">
+    <cc:attribute name="text" required="true" type="java.lang.String" shortDescription="Texto do item de menu."/>
+</cc:interface>
+<cc:implementation>
+
+    <nav class="nav-primary hidden-xs">
+        <div class="text-muted text-sm hidden-nav-xs padder-h m-t-sm m-b-sm">#{cc.text}</div>
+<!--         <h:form id="menuSecaoForm"> -->
+            <ul class="nav nav-main" data-ride="collapse">
+                <cc:insertChildren/>
+            </ul>
+<!--         </h:form> -->
+    </nav>
+
+</cc:implementation>
+</ui:composition>

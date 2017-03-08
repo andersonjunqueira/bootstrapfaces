@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:cc="http://java.sun.com/jsf/composite"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:o="http://omnifaces.org/ui"
+        xmlns:of="http://omnifaces.org/functions">
+
+<cc:interface componentType="ctis.bootstrapfaces.carrossel" shortDescription="Exibição de imagens em formato slideshow">
+    <cc:attribute name="value" type="java.util.List" required="true" />
+    <cc:attribute name="width" type="java.lang.Integer" required="false" />
+    <cc:attribute name="height" type="java.lang.Integer" required="false" />
+</cc:interface>
+<cc:implementation>
+
+    <h:panelGroup id="componente" layout="block">
+
+        <div class="carousel slide auto panel-body" id="c-slide">
+            <ol class="carousel-indicators out">
+                <ui:repeat value="#{cc.value}" var="v" varStatus="i">
+                    <li data-target="#c-slide" data-slide-to="#{i.index}" class="#{i.index eq 0 ? 'active' : ''}"></li>
+                </ui:repeat>
+            </ol>
+            <div class="carousel-inner">
+            
+                <ui:repeat value="#{cc.value}" var="v" varStatus="i">
+
+                    <div class="item #{i.index eq 0 ? 'active' : ''}">
+                        <p class="text-center">
+                            <h:graphicImage value="#{v}" 
+                                width="#{!empty cc.width ? cc.width : ''}"
+                                height="#{!empty cc.height ? cc.height : ''}"/>
+                        </p>
+                    </div>
+
+                </ui:repeat>
+                
+            </div>
+            <a class="left carousel-control" href="#c-slide" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right carousel-control" href="#c-slide" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    
+    </h:panelGroup>
+    
+</cc:implementation>
+
+</ui:composition>

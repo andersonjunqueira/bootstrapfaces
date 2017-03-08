@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces"
+    template="/layouts/template_master.xhtml">
+
+<ui:define name="master-body">
+
+<section class="vbox">
+    <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+        <h:form id="headerForm">
+
+            <div class="navbar-header aside-md bg-white">
+                <a class="btn btn-link visible-xs"
+                    data-toggle-class="nav-off-screen"
+                    data-target="#nav">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="#{msg['sistema.instituicao.url']}" class="navbar-brand text-center" target="_blank">
+                    <figure class="inline m-r-xs">
+                        <h:graphicImage library="img" name="logo-contraste.png" alt="#{msg['sistema.instituicao.sigla']}" styleClass="logo-contraste"/>
+                        <h:graphicImage library="img" name="logo.png" alt="#{msg['sistema.instituicao.sigla']}" styleClass="logo-semcontraste"/>
+                    </figure>
+                </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav hidden-xs">
+                <li>
+                    <a href="#{request.contextPath}/index.html">
+                        <ui:insert name="nome-sistema">
+                            #{msg['sistema.sigla']}
+                        </ui:insert>
+                    </a>
+                </li>
+
+                <li class="hidden-sm hidden-md">
+                    <a href="#{request.contextPath}/index.html">
+                        <ui:insert name="sigla-versao-sistema">
+                            v#{msg['sistema.versao']}
+                        </ui:insert>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+
+                <li class="hidden-sm">
+                    <ui:insert name="manual-sistema">
+                        <h:commandLink action="/manual/index.jsf?faces-redirect=true" target="_blank">
+                            <i class="i i-support"></i>
+                            <span class="hidden-sm hidden-md">#{sis['sistema.label.manualsistema']}</span>
+                        </h:commandLink>
+                    </ui:insert>
+                </li>
+
+                <li class="hidden-sm">
+                    <ui:insert name="acessibilidade">
+                        <ui:include src="/layouts/include_acessibilidade.xhtml" />
+                    </ui:insert>
+                </li>
+
+                <li>
+                    <ui:insert name="logout">
+                        <h:commandLink
+                            action="#{controleViewMB.logout()}">
+                            <span class="hidden-sm">#{sis['sistema.botao.sair']}</span>
+                            <i class="i i-logout"></i>
+                        </h:commandLink>
+                    </ui:insert>
+                </li>
+
+            </ul>
+        </h:form>
+    </header>
+
+    <section>
+        <section class="hbox stretch">
+
+            <ui:insert name="menu-lateral">
+                <bf:menuLateral id="menuLateral">
+                    <bf:menuProfile id="menuProfile" name="Junqueira" role="Arquiteto">
+                        <bf:menuItem text="Perfil" action="/temp/index.jsf" icon=""/>
+                        <bf:menuItem text="Notificações" action="/temp/index.jsf" badge="3" icon=""/>
+                        <li class="divider"></li>
+                        <bf:menuItem text="Configurações" action="/temp/index.jsf" icon=""/>
+                    </bf:menuProfile>
+
+                    <bf:menuSection id="menuSection" text="Navegação">
+
+                        <bf:menuGroup id="n1" text="Nivel 1" icon="i i-lab" badge="10">
+                            <bf:menuGroup id="n2" text="Nivel 2" icon="i i-lab" badge="11">
+                                <bf:menuItem id="n3" text="Nivel 3" action="/temp/index.jsf" badge="12"/>
+                            </bf:menuGroup>
+                        </bf:menuGroup>
+
+                    </bf:menuSection>
+                </bf:menuLateral>
+             </ui:insert>
+
+            <section id="content">
+                <section class="hbox stretch">
+                    <section>
+                        <section class="vbox">
+                            <section class="scrollable">
+                                <div class="slim-scroll padder-h"
+                                    data-height="auto"
+                                    data-disable-fade-out="true"
+                                    data-distance="0" data-size="10px"
+                                    data-railOpacity="0.2">
+
+                                    <ui:insert name="conteudo"/>
+
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <a href="#" class="hide nav-off-screen-block"
+                    data-toggle-class="nav-off-screen"
+                    data-target="#nav"></a>
+            </section>
+        </section>
+    </section>
+</section>
+
+</ui:define>
+</ui:composition>

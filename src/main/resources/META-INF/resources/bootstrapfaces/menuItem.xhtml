@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface componentType="ctis.bootstrapfaces.menuitem" shortDescription="Item de menu que pode ser colocado no menu lateral, menu profile ou menu group.">
+    <cc:attribute name="text" required="true" type="java.lang.String" shortDescription="Texto do item de menu."/>
+    <cc:attribute name="icon" required="false" type="java.lang.String" shortDescription="Classes CSS que indicam o ícone a ser apresentado."/>
+    <cc:attribute name="badge" required="false" type="java.lang.String"  shortDescription="Número a ser exibido à direita do item do menu."/>
+    <cc:attribute name="badgeColor" required="false" type="java.lang.String" shortDescription="Classe CSS que define a cor do texto em destaque. Valor padrão: danger."/>
+    <cc:attribute name="action" targets="link" required="true" shortDescription="Ação do item de menu."/>
+</cc:interface>
+<cc:implementation>
+
+    <li>
+        <h:commandLink id="link" styleClass="auto" actionListener="#{cc.menuItemSelection}">
+            <ui:fragment rendered="#{!empty cc.badge}">
+                <b class="badge bg-#{cc.badgeColor} pull-right">#{cc.badge}</b>
+            </ui:fragment>
+            <ui:fragment rendered="#{!empty cc.icon}">
+                <i class="#{cc.icon}"></i>
+            </ui:fragment>
+            <span>#{cc.text}</span>
+        </h:commandLink>
+    </li>
+
+</cc:implementation>
+
+</ui:composition>

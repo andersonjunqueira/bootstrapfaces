@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:b="http://www.ctis.com.br/bootstrapfaces">
+
+
+
+    <ul id="rvfs-controllers1" class="list-unstyled list-inline list-accessibility padder-h">
+        <li>
+            <a href="#" class="rvfs-decrease" data-toggle="tooltip" data-placement="bottom" 
+                title="#{comps['framework.layout.diminuirletra']}">
+                <i class="fa fa-font"></i>-
+            </a>
+        </li>
+        <li>
+            <a href="#" class="rvfs-reset" data-toggle="tooltip" data-placement="bottom" 
+                title="#{comps['framework.layout.tamanholetrapadrao']}">
+                <i class="fa fa-font"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="rvfs-increase" data-toggle="tooltip" data-placement="bottom" 
+                title="#{comps['framework.layout.aumentarletra']}">
+                <i class="fa fa-font"></i>+
+            </a>
+        </li>
+        <li>
+            <a href="#" class="active-contrast" data-toggle="tooltip" data-placement="bottom" 
+                title="#{comps['framework.layout.contraste']}">
+                <i class="fa fa-adjust"></i>
+            </a>
+        </li>
+        <ui:insert name="barra-idiomas">
+            <li>
+                <h:commandLink action="#{controleViewMB.defineIdioma('pt','BR')}"
+                    title="#{comps['framework.layout.alteraridiomaptbr']}"
+                    rendered="#{controleViewMB.idioma ne 'pt'}" styleClass="link-idioma">
+                    <h:graphicImage library="img" name="idioma-pt_br.png"/>
+                </h:commandLink>
+                <h:commandLink action="#{controleViewMB.defineIdioma('en','US')}"
+                    title="#{comps['framework.layout.alteraridiomaenus']}"
+                    rendered="#{controleViewMB.idioma ne 'en'}" styleClass="link-idioma">
+                    <h:graphicImage library="img" name="idioma-en_us.png"/>
+                </h:commandLink>
+                <h:commandLink action="#{controleViewMB.defineIdioma('es','ES')}"
+                    title="#{comps['framework.layout.alteraridiomaeses']}"
+                    rendered="#{controleViewMB.idioma ne 'es'}" styleClass="link-idioma">
+                    <h:graphicImage library="img" name="idioma-es_es.png"/>
+                </h:commandLink>
+                <ui:insert name="idiomas-extras"/>
+            </li>
+        </ui:insert>
+
+    </ul>
+
+
+</ui:composition>

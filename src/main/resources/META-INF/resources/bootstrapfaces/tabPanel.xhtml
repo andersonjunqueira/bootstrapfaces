@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces">
+
+<cc:interface componentType="ctis.bootstrapfaces.tabPanel">
+</cc:interface>
+<cc:implementation>
+
+<h:panelGroup id="componente" layout="block">
+    <ul class="nav nav-tabs m-b" data-tab-state="">
+        #{cc.encodeHeaders()}
+    </ul>
+    <div class="tab-content">
+        #{cc.encodeContent()}
+    </div>
+</h:panelGroup>
+
+</cc:implementation>
+
+</ui:composition>

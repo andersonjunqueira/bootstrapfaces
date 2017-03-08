@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface componentType="ctis.bootstrapfaces.menuitem"
+    shortDescription="Grupo de itens de menu a serem usados no menu lateral esquerdo.">
+    <cc:attribute name="text" required="true" type="java.lang.String" shortDescription="Texto do item de menu."/>
+    <cc:attribute name="icon" required="false" type="java.lang.String" shortDescription="Classes CSS que indicam o ícone a ser apresentado."/>
+    <cc:attribute name="badge" required="false" type="java.lang.String"  shortDescription="Número a ser exibido à direita do item do menu."/>
+    <cc:attribute name="badgeColor" required="false" type="java.lang.String" shortDescription="Classe CSS que define a cor do texto em destaque. Valor padrão: danger."/>
+</cc:interface>
+<cc:implementation>
+
+    <li class="#{cc.isGroupActive() ? 'active' : ''}">
+        <a href="#" class="auto">
+            <span class="pull-right text-muted">
+                <i class="i i-circle-sm-o text-inactive"></i>
+                <i class="i i-circle-sm text-active"></i>
+            </span> 
+            <ui:fragment rendered="#{!empty cc.badge}">
+                <b class="badge bg-#{cc.badgeColor} pull-right">#{cc.badge}</b>
+            </ui:fragment>
+            <i class="#{cc.icon} icon"></i>
+            <strong>#{cc.text}</strong>
+        </a>
+        <ul class="nav dk#{cc.superMenuItem ? 'er' : ''}">
+            <cc:insertChildren/>
+        </ul>
+    </li>
+
+</cc:implementation>
+
+</ui:composition>

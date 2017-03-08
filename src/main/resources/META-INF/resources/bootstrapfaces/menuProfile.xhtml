@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface componentType="ctis.bootstrapfaces.menuprofile" shortDescription="Exibe o nome do usuário autenticado e o perfil associado. Possui um menu suspenso para operações específicas.">
+    <cc:attribute name="name" required="true" type="java.lang.String" shortDescription="Nome a ser apresentado na seção profile do menu."/>
+    <cc:attribute name="role" required="false" type="java.lang.String" shortDescription="Perfil de acesso a ser apresentado na seção profile do menu."/>
+    <cc:attribute name="showMenu" type="java.lang.Boolean" shortDescription="Define se o menu suspenso será exibido. Valor padrão: true."/>
+    <cc:attribute name="badge" type="java.lang.String" shortDescription="Define a imagem a ser exibida abaixo do nome do perfil"/>
+</cc:interface>
+<cc:implementation>
+
+    <div id="#{cc.clientId}" class="clearfix wrapper dk nav-user hidden-xs profile">
+        <ui:fragment rendered="#{cc.showMenu}">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle no-ul" data-toggle="dropdown">
+                    <ui:include src="/layouts/include_menuprofile.xhtml">
+                        <ui:param name="name" value="#{cc.name}"/>
+                        <ui:param name="dropdown" value="#{cc.showMenu}"/>
+                        <ui:param name="role" value="#{cc.role}"/>
+                    </ui:include>
+                </a>
+                <ul class="dropdown-menu animated fadeIn m-t-xs">
+                    <li><span class="arrow top hidden-nav-xs"></span></li>
+                    <cc:insertChildren/>
+                </ul>
+            </div>
+        </ui:fragment>
+        <ui:fragment rendered="#{!cc.showMenu}">
+            <ui:include src="/layouts/include_menuprofile.xhtml">
+                <ui:param name="name" value="#{cc.name}"/>
+                <ui:param name="dropdown" value="#{cc.showMenu}"/>
+                <ui:param name="role" value="#{cc.role}"/>
+                <ui:param name="badge" value="#{cc.badge}"/>
+            </ui:include>
+        </ui:fragment>
+    </div>
+
+</cc:implementation>
+
+</ui:composition>

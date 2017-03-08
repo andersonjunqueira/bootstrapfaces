@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces">
+
+<cc:interface componentType="ctis.bootstrapfaces.paginatedtable">
+
+    <cc:attribute name="pageSizes" required="false" default="10 25 50 100" type="java.lang.String"/>
+
+    <cc:attribute name="value" required="true"/>
+    <cc:attribute name="columnClasses" required="false" type="java.lang.String"/>
+    <cc:attribute name="theme" required="false" type="java.lang.String" shortDescription="Estilo para o painel. Valor padrão: primary. Valores possíveis: default, primary, danger, success, warning."/>
+
+    <cc:facet name="search" shortDescription="Customização da área de busca do componente" />
+
+</cc:interface>
+<cc:implementation>
+    <h:panelGroup id="componente" layout="block">
+
+        <div class="row">
+            <div class="col-xs-5 col-sm-6 col-md-7 col-lg-6"></div>
+            <div class="col-xs-7 col-sm-6 col-md-5 col-lg-6 m-b-xs text-right">
+                <h:selectOneMenu id="pageSizeSelect" value="#{cc.pageSize}" styleClass="form-control input-sm input-s-md inline v-middle">
+                    <f:selectItems value="#{cc.pageSelectorList}" var="ps" itemValue="#{ps}" itemLabel="#{ps}"/>
+                </h:selectOneMenu>
+                <h:commandLink id="pageSizeDefine" action="#{cc.definePageSize()}" styleClass="btn btn-sm btn-default">
+                    <f:ajax execute="pageSizeSelect" render="resultset"/>
+                    #{comps['framework.crudTable.aplicar']}
+                </h:commandLink>
+            </div>
+        </div>
+
+        <h:panelGroup id="resultset" layout="block">
+            <div class="table-responsive">
+
+                <h:dataTable id="table" var="reg" value="#{cc.value}" 
+                    styleClass="table table-striped table-bordered v-middle b-t b-light table-nomargin-bottom"
+                    columnClasses="#{cc.attrs.columnClasses}"
+                    rendered="#{cc.value.size() gt 0}">
+                    <cc:insertChildren/>
+                </h:dataTable>
+                <ui:fragment rendered="#{cc.value.size() eq 0}">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <p><h:outputText value="#{comps['framework.crudTable.nenhumregistro']}"/></p>
+                        </div>
+                    </div>
+                </ui:fragment> 
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <ui:fragment rendered="#{cc.resultSetCount > 0}">
+                        <small class="text-muted inline m-t-sm m-b-sm">
+                            #{comps['framework.tablePaginator.mostrando']}
+                            #{cc.pageStart}-#{cc.pageEnd}
+                            #{comps['framework.tablePaginator.de']}
+                            #{cc.resultSetCount}
+                            #{comps['framework.tablePaginator.itens']}
+                        </small>
+                    </ui:fragment>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <ui:fragment rendered="#{cc.showNavigation}">
+                        <ul class="pagination pagination-sm m-t-xs m-b-none">
+                            <li>
+                                <h:commandLink id="pagFirst">
+                                    <f:ajax listener="#{cc.gotoFirstPage()}" render=":#{cc.clientId}:resultset"/>
+                                    <i class="fa fa-fast-backward"></i>
+                                </h:commandLink>
+                            </li>
+                            <ui:repeat var="i" value="#{cc.navigationPages}">
+    
+                                <li class="#{cc.getPageIndex() eq (i+1) ? 'active' : ''}">
+                                    <h:commandLink >
+                                        <f:ajax listener="#{cc.gotoPage(i)}" render=":#{cc.clientId}:resultset"/>
+                                        #{i+1}
+                                    </h:commandLink>
+                                </li>
+                            </ui:repeat>
+                            <li>
+                                <h:commandLink id="pagLast">
+                                    <f:ajax listener="#{cc.gotoLastPage()}" render=":#{cc.clientId}:resultset"/>
+                                    <i class="fa fa-fast-forward"></i>
+                                </h:commandLink>
+                            </li>
+                        </ul>
+                    </ui:fragment>
+                </div>
+            </div>
+        </h:panelGroup>
+
+    </h:panelGroup>
+</cc:implementation>
+
+</ui:composition>

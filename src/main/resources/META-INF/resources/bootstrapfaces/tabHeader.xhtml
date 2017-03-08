@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces">
+
+<cc:interface componentType="ctis.bootstrapfaces.tabHeader">
+    <cc:attribute name="jsId" required="true" type="java.lang.String" shortDescription="Nome para referência do componente nos scripts" />
+    <cc:attribute name="text" required="true" type="java.lang.String" shortDescription="Texto do item de menu."/>
+    <cc:attribute name="icon" required="false" type="java.lang.String" shortDescription="Classes CSS que indicam o ícone a ser apresentado."/>
+    <cc:attribute name="active" required="false" type="java.lang.Boolean" shortDescription="Indica se a tab está ativa"/>
+</cc:interface>
+<cc:implementation>
+
+    <li class="#{cc.active ? 'active' : ''}">
+        <a href="##{cc.jsId}" data-toggle="tab">
+            <ui:fragment rendered="#{!empty cc.icon}">
+                <i class="#{cc.icon} text-muted"></i> 
+            </ui:fragment>
+            #{cc.text}
+        </a>
+    </li>
+
+</cc:implementation>
+
+</ui:composition>

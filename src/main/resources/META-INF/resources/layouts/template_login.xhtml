@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:b="http://www.ctis.com.br/bootstrapfaces"
+    template="/layouts/template_externo.xhtml">
+
+<ui:define name="entry-body">
+
+<div class="col-md-4 col-md-offset-4">
+    <section class="login-content">
+        <div class="text-center">
+            <figure>
+                <ui:insert name="logo"/>
+            </figure>
+            <h1 class="h4">
+                <ui:insert name="logo-legenda"/>
+            </h1>
+        </div>
+        <ui:insert name="conteudo"/>
+    </section>
+</div>
+
+<ui:fragment rendered="#{controleViewMB.possuiAviso and !controleViewMB.avisoVisto}">
+    <b:form id="avisoForm">
+        <b:dialog id="dialogoAviso" jsId="dialogoAviso" title="#{comps['framework.aviso.titulo']}">
+            <div class="row wrapper">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>#{controleViewMB.mensagemAviso}</p>
+                </div>
+            </div>
+            <f:facet name="footer">
+                <h:panelGroup layout="block" styleClass="text-center">
+                    <h:commandLink action="#{controleViewMB.marcarAvisoVisto()}"
+                        value="#{comps['framework.aviso.botao.ok']}"
+                        styleClass="btn btn-primary"/>
+                </h:panelGroup>
+            </f:facet>
+        </b:dialog>
+        <script>$('#dialogoAviso').appendTo('body').modal('show');</script>
+    </b:form>
+</ui:fragment>
+
+</ui:define>
+</ui:composition>

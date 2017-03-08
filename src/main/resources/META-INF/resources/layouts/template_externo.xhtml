@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces"
+    template="/layouts/template_master.xhtml">
+
+<ui:define name="master-body">
+
+<ui:include src="/layouts/include_browserhappy.xhtml"/>
+
+<main class="entry-content" role="main">
+    <div class="container">
+        <div class="row animated fadeInUp">
+            <ui:insert name="entry-body"/>
+        </div>
+    </div>
+</main>
+<footer class="footer-bottom footer-fixed bg-white b-t">
+    <div class="container-fluid">
+        <ui:insert name="rodape">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 text-center">
+                    <p class="m-n">
+                        &#xA9; #{sis['sistema.ano']} #{sis['sistema.instituicao.sigla']}
+                        <span class="hidden-xs">-
+                            #{sis['sistema.instituicao']}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-xs-3 text-right">
+                    <ul class="list-inline m-b-none">
+                        <li>v#{sis['sistema.versao']}</li>
+                    </ul>
+                </div>
+            </div>
+        </ui:insert>
+    </div>
+</footer>
+</ui:define>
+</ui:composition>

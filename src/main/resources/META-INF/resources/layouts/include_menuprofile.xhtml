@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:b="http://www.ctis.com.br/bootstrapfaces">
+
+    <figure class="thumb avatar pull-left m-r">
+        <h:graphicImage library="img" name="profile/avatar.png" alt="#{name}" styleClass="dker"/>
+        <!-- i class="on md b-black"></i-->
+    </figure> 
+
+    <span class="hidden-nav-xs clear">
+        <span class="block m-t-xs">
+            <strong class="text-lt profile-name">#{name}</strong>
+
+            <ui:fragment rendered="#{dropdown}"> 
+                <i class="fa fa-caret-down"></i>
+            </ui:fragment>
+
+        </span> 
+        <span class="text-muted text-xs block">#{role}</span>
+        <h:graphicImage library="img" name="#{badge}" styleClass="profile-badge" 
+            rendered="#{!empty badge}"/>
+    </span>
+
+</ui:composition>

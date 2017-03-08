@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:b="http://www.ctis.com.br/bootstrapfaces">
+
+    <ui:fragment rendered="#{controleViewMB.helper.chrome}">
+        <ui:fragment rendered="#{controleViewMB.helper.versao lt 40}">
+            <p class="browsehappy">
+                <h:outputText value="#{comps['framework.layout.browserhappy.desatualizado']}" escape="false" />
+            </p>
+        </ui:fragment>
+        <ui:fragment rendered="#{controleViewMB.helper.versao gt 39}">
+            <p class="browsehappy" style="visibility: hidden;"></p>
+        </ui:fragment>
+    </ui:fragment>
+    <ui:fragment rendered="#{!controleViewMB.helper.chrome}">
+        <p class="browsehappy">
+            <h:outputText value="#{comps['framework.layout.browserhappy.forapadrao']}" escape="false" />
+        </p>
+    </ui:fragment>
+
+</ui:composition>

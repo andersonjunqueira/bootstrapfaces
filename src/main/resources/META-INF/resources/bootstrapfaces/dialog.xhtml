@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces">
+
+<cc:interface componentType="ctis.bootstrapfaces.dialog" shortDescription="Janela modal para apresentação de mensagens ou formulários.">
+    <cc:attribute name="title" required="true" type="java.lang.String" shortDescription="Titulo da janela modal." />
+    <cc:attribute name="jsId" required="true" type="java.lang.String" shortDescription="Nome para referência do componente nos scripts" />
+    <cc:attribute name="message" required="false" type="java.lang.String" shortDescription="Mensagem a ser exibida, não deve ser informado se o dialogo apresentar o formulário. " />
+    <cc:facet name="footer" shortDescription="Destinada a botões que serão renderizados na barra de rodapé do painel." />
+</cc:interface>
+<cc:implementation>
+
+    <div id="#{cc.jsId}" class="modal fade in" tabindex="-1"
+        role="dialog" aria-labelledby="#{cc.jsId}Label" aria-hidden="true" 
+        style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="cadastroModalLabel">#{cc.title}</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <ui:fragment rendered="#{!empty cc.message}">
+                        #{cc.message}
+                    </ui:fragment>
+                    <ui:fragment rendered="#{empty cc.message}">
+                        <cc:insertChildren/>
+                    </ui:fragment>
+
+                </div>
+
+                <ui:fragment rendered="#{!empty cc.facets.footer}">
+                    <div class="modal-footer">
+                        <cc:renderFacet name="footer"/>
+                    </div>
+                </ui:fragment>
+            </div>
+        </div>
+    </div>
+
+</cc:implementation>
+
+</ui:composition>

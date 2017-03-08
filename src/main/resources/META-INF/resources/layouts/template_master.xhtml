@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces"
+    class="app no-js" lang="#{controleViewMB.idioma}" dir="ltr">
+
+<h:head>
+
+    <meta charset="utf-8"/>
+
+    <title><h:outputText value="#{msg['sistema.sigla']} - #{msg['sistema.nome']}" /></title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+
+    <meta name="description" content="#{msg['sistema.descricao']}"/>
+    <meta name="keywords" content="#{msg['sistema.palavraschave']}"/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <link rel="shortcut icon" href="#{request.contextPath}/favicon.png"/>
+
+    <h:outputStylesheet library="styles" name="vendor.css"/>
+    <!--
+    <link rel="stylesheet" href="styles/vendor.css">
+    -->
+
+    <h:outputStylesheet library="styles" name="main.css"/>
+    <!--
+    <link rel="stylesheet" href="styles/main.css">
+    -->
+
+    <h:outputStylesheet library="styles" name="bootstrapfaces.css"/>
+    <h:outputStylesheet library="styles" name="vendor/google-code-prettify/github.css" id="prettify"/>
+
+    <h:outputScript library="scripts" name="vendor/modernizr.js"/>
+    <!--
+    <script src="scripts/vendor/modernizr.js"></script>
+    -->
+
+    <h:outputScript library="scripts" name="vendor.js"/>
+    <!--
+    <script src="scripts/vendor.js"></script>
+    -->
+
+    <ui:insert name="head-include" />
+
+</h:head>
+<h:body>
+
+    <ui:insert name="barra-governo">
+        <div id="barra-brasil" style="background: #7f7f7f; height: 20px; padding: 0 0 0 10px; display: block; min-height: 32px;">
+          <ul id="menu-barra-temp" style="list-style: none;">
+            <li style="display: inline; float: left; padding-right: 10px; margin-right: 10px; border-right: 1px solid #ededed;"><a href="http://brasil.gov.br" style="font-family: sans,sans-serif; text-decoration: none; color: white;">Portal do Governo Brasileiro</a></li>
+            <li><a href="http://epwg.governoeletronico.gov.br/barra/atualize.html" style="font-family: sans,sans-serif; text-decoration: none; color: white;">Atualize sua Barra de Governo</a></li>
+          </ul>
+        </div>
+    </ui:insert>
+
+    <ui:insert name="master-body"/>
+    <ui:insert name="body-include" />
+
+    <h:outputScript library="scripts" name="ie.js" rendered="#{controleViewMB.helper.IE and controleViewMB.helper.versao lt 9}"/>
+    <!--
+    <script src="scripts/ie.js"></script>
+    -->
+
+    <h:outputScript library="scripts" name="main.js"/>
+    <!--
+    <script src="scripts/main.js"></script>
+    -->
+
+    <h:outputScript library="scripts" name="demo.js"/>
+    <!--
+    <script src="scripts/demo.js"></script>
+    -->
+
+    <ui:insert name="barra-governo-script">
+        <script defer="defer" async="async" src="https://barra.brasil.gov.br/barra.js"></script>
+    </ui:insert>
+
+    <h:outputScript library="scripts" name="bootstrapfaces.js"/>
+    <ui:insert name="scripts-include" />
+
+</h:body>
+</html>

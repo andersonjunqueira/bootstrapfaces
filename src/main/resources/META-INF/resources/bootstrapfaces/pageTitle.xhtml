@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:cc="http://java.sun.com/jsf/composite"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface componentType="ctis.bootstrapfaces.pagetitle"
+    shortDescription="Título visual para as páginas podendo possuir um subtitulo.">
+    <cc:attribute name="text" required="true" type="java.lang.String" shortDescription="Texto a ser apresentado no topo da página."/>
+    <cc:attribute name="message" required="false" type="java.lang.String" shortDescription="Texto em tamanho menor apresentado abaixo do título."/>
+</cc:interface>
+<cc:implementation>
+    <h:panelGroup id="componente" class="row m-b-md" layout="block">
+        <div class="col-sm-12">
+            <h1 class="m-b-xs text-black">#{cc.text}</h1>
+            <ui:fragment rendered="#{!empty cc.message}">
+                <small>#{cc.message}</small>
+            </ui:fragment>
+        </div>
+    </h:panelGroup>
+</cc:implementation>
+
+</ui:composition>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:cc="http://java.sun.com/jsf/composite"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface componentType="ctis.bootstrapfaces.fieldset"
+    shortDescription="Separador visual para os componentes.">
+    <cc:attribute name="legend" required="true" type="java.lang.String" shortDescription="Texto apresentado no cabeçalho do painel."/>
+    <cc:attribute name="helpContext" required="false" type="java.lang.String" shortDescription="Adiciona um link com referência para o manual informado no atributo."/>
+    <cc:attribute name="contentPadding" required="false" type="java.lang.Boolean" shortDescription="Informa se o componente deverá adicionar o espaçamento automático para a área de conteúdo. Valor padrão: true"/>
+    <cc:attribute name="headerClass" required="false" type="java.lang.String" shortDescription="Classes CSS adicionais a serem aplicadas ao título do painel."/>
+    <cc:attribute name="theme" required="false" type="java.lang.String" shortDescription="Estilo para o painel. Valor padrão: primary. Valores possíveis: default, primary, danger, success, warning."/>
+
+    <cc:facet name="actions" shortDescription="Destinada a botões que serão renderizados na barra de título do painel."/>
+    <cc:facet name="footer" shortDescription="Destinada a botões que serão renderizados na barra de rodapé do painel."/>
+    <cc:facet name="extraFooter" shortDescription="Destinada a componentes renderizados imediatamente antes do rodapé."/>
+</cc:interface>
+<cc:implementation>
+
+    <h:panelGroup id="componente" layout="block">
+        <section class="panel panel-#{cc.theme}" role="region">
+            <header class="panel-heading">
+                <ui:fragment rendered="#{!empty cc.facets.actions or !empty cc.attrs.helpContext}">
+                    <div class="pull-right">
+                        <ui:fragment rendered="#{!empty cc.facets.actions}">
+                            <cc:renderFacet name="actions"/>
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!empty cc.attrs.helpContext}">
+                            <a class="help-badge" href="#{cc.helpContext}" target="_blank">
+                                <i class="fa fa-question-circle"></i>
+                            </a>
+                        </ui:fragment>
+                    </div>
+                </ui:fragment>
+                <h2 class="panel-title h5 #{cc.headerClass}">#{cc.legend}</h2>
+            </header>
+
+            <div class="#{cc.contentPadding ? 'row wrapper' : ''}">
+                <div class="#{cc.contentPadding ? 'col-sm-12' : ''}">
+                    <cc:insertChildren/>
+                </div>
+            </div>
+
+            <ui:fragment rendered="#{!empty cc.facets.extraFooter}">
+                <footer class="panel-footer no-radius">
+                    <cc:renderFacet name="extraFooter"/>
+                </footer>
+            </ui:fragment>
+            <ui:fragment rendered="#{!empty cc.facets.footer}">
+                <footer class="panel-footer clearfix">
+                    <cc:renderFacet name="footer"/>
+                </footer>
+            </ui:fragment>
+        </section>
+    </h:panelGroup>
+
+</cc:implementation>
+
+</ui:composition>

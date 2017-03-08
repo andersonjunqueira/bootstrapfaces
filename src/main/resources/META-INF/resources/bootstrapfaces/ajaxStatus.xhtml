@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<cc:interface shortDescription="Bloqueia a página durante as requisições ajax.">
+    <cc:attribute name="title" required="true" type="java.lang.String" shortDescription="Título apresentado no layer de bloqueio"/>
+    <cc:attribute name="message" required="true" type="java.lang.String" shortDescription="Mensagem apresentada no layer de bloqueio"/>
+</cc:interface>
+<cc:implementation>
+
+    <h:panelGroup id="componente" layout="block" styleClass="loading">
+        <div class="message">
+            <div class="text-center">
+                <div class="block m-b">
+                    <i class="fa fa-spinner fa-5x fa-spin"></i>
+                </div>
+                <h3>#{!empty cc.attrs.title ? cc.attrs.title : comps['framework.ajaxstatus.titulo']}</h3>
+                <h3>#{!empty cc.attrs.message ? cc.attrs.message : comps['framework.ajaxstatus.aguarde']}</h3>
+            </div>
+        </div>
+    </h:panelGroup>
+
+</cc:implementation>
+
+</ui:composition>

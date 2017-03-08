@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+     <modelVersion>4.0.0</modelVersion>
+
+     <groupId>br.com.neotech</groupId>
+     <artifactId>bootstrapfaces</artifactId>
+     <version>4.1.27.0</version>
+     <packaging>jar</packaging>
+
+    <parent>
+        <groupId>br.com.neotech.poms</groupId>
+        <artifactId>jee6-arquitetura</artifactId>
+        <version>2.0.0.2</version>
+    </parent>
+
+    <name>Biblioteca de Componentes JSF2/Bootstrap</name>
+
+    <developers>
+        <developer>
+            <id>anderson.junqueira</id>
+            <name>Anderson Junqueira</name>
+            <email>anderson.junqueira@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <scm.baseurl>https://github.com/andersonjunqueira/bootstrapfaces.git</scm.baseurl>
+    </properties>
+
+    <scm>
+        <url>${scm.baseurl}</url>
+        <connection>scm:git:${scm.baseurl}</connection>
+        <developerConnection>scm:git:${scm.baseurl}</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.com.neotech</groupId>
+            <artifactId>jee6-framework</artifactId>
+            <version>3.1.11.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId> 
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.octo.captcha</groupId>
+            <artifactId>jcaptcha-all</artifactId>
+            <version>1.0-RC6</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <configuration>
+                        <failOnError>false</failOnError>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

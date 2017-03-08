@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces">
+
+<cc:interface componentType="ctis.bootstrapfaces.progressBar">
+
+    <cc:attribute name="position" required="true" type="java.lang.Double" shortDescription="Indica o percentual de completude da barra. Valores permitidos: Inteiros e positivos entre 0 e 100."/>
+    <cc:attribute name="size" required="false" type="java.lang.Integer" shortDescription="Indica a altura da barra de progresso. Valor Padrão: 3. Valores Possíveis: 1, 2 ou 3."/>
+    <cc:attribute name="color" required="false" default="true" type="java.lang.String" shortDescription="Indica a cor da barra de progresso. Valor Padrão: primary. Valores Possíveis: primary, warning, info, danger, success."/>
+
+</cc:interface>
+<cc:implementation>
+
+    <h:panelGroup id="componente" layout="block" styleClass="progress #{cc.sizeClass} progress-striped">
+        <div class="progress-bar bg-#{cc.color}" data-toggle="tooltip" data-original-title="#{cc.position}%" style="width: #{cc.position}%"></div>
+    </h:panelGroup>
+
+</cc:implementation>
+
+</ui:composition>

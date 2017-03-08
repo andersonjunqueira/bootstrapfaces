@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:bf="http://www.ctis.com.br/bootstrapfaces">
+
+<cc:interface componentType="ctis.bootstrapfaces.crudtable">
+
+    <cc:attribute name="headerTitle" required="true" type="java.lang.String"/>
+    <cc:attribute name="helpContext" required="false" type="java.lang.String"/>
+
+    <cc:attribute name="enableNew" required="false" default="true" type="java.lang.Boolean"/>
+    <cc:attribute name="actionForNew" required="false" method-signature="java.lang.String action()"/>
+    <cc:attribute name="scriptForNew" required="false" type="java.lang.String"/>
+	
+    <cc:attribute name="actionForRefresh" required="false" method-signature="java.lang.String action()"/>
+
+	<cc:attribute name="enableSearch" required="false" default="true" type="java.lang.Boolean"/>
+    <cc:attribute name="searchParameter" required="false" type="java.lang.String"/>
+    <cc:attribute name="actionForSearch" required="false" method-signature="java.lang.String action()"/>
+    <cc:attribute name="actionForClear" required="false" method-signature="java.lang.String action()"/>
+    <cc:attribute name="renderOnSearch" required="false"/>
+
+    <cc:attribute name="pageSizes" required="false" default="10 25 50 100" type="java.lang.String"/>
+
+    <cc:attribute name="value" required="true"/>
+    <cc:attribute name="columnClasses" required="false" type="java.lang.String"/>
+    <cc:attribute name="rowClasses" required="false" type="java.lang.String"/>
+    <cc:attribute name="theme" required="false" type="java.lang.String" shortDescription="Estilo para o painel. Valor padrão: primary. Valores possíveis: default, primary, danger, success, warning."/>
+
+    <cc:facet name="search" shortDescription="Customização da área de busca do componente" />
+
+</cc:interface>
+<cc:implementation>
+<h:panelGroup id="componente" layout="block">
+
+    <section class="panel panel-#{cc.theme}" role="region">
+        <header class="panel-heading">
+
+            <div class="pull-right">
+                <ui:fragment rendered="#{!empty cc.facets.extraHeader}">
+                    <cc:renderFacet name="extraHeader"/>
+                </ui:fragment>
+
+                <ui:fragment rendered="#{cc.enableNew}">
+                    <ui:fragment rendered="#{!empty cc.attrs.scriptForNew}">
+                        <a href="#" class="btn btn-sm btn-default">
+                            <i class="fa fa-plus"></i> #{comps['framework.crudTable.novo']}
+                        </a>
+                    </ui:fragment>
+                    <h:commandLink id="headerNewLink" action="#{cc.attrs.actionForNew}" styleClass="btn btn-sm btn-default"
+                        rendered="#{!empty cc.attrs.actionForNew}">
+                        <i class="fa fa-plus"></i> #{comps['framework.crudTable.novo']}
+                    </h:commandLink>
+                </ui:fragment>
+
+                <h:commandLink id="headerRefreshLink" action="#{cc.attrs.actionForRefresh}" styleClass="btn btn-sm btn-default"
+                    rendered="#{!empty cc.attrs.actionForRefresh}">
+                    <f:ajax render="@this resultset #{cc.renderOnSearch}"/>
+                    <i class="fa fa-refresh"></i> #{comps['framework.crudTable.atualizar']}
+                </h:commandLink>
+                <ui:fragment rendered="#{!empty cc.helpContext}">
+                    <a class="help-badge" href="#{cc.helpContext}" target="_blank">
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                </ui:fragment>
+            </div>
+
+            <h2 class="panel-title h5">#{cc.headerTitle}</h2>
+        </header>
+
+        <div class="row wrapper">
+            <div class="col-xs-5 col-sm-6 col-md-7 col-lg-6">
+                <ui:fragment rendered="#{!empty cc.facets.search}">
+                    <cc:renderFacet name="search"/>
+                </ui:fragment>
+                <ui:fragment rendered="#{empty cc.facets.search and cc.attrs.enableSearch}">
+                    <div class="input-group">
+                        <h:inputText id="searchParamsInput" value="#{cc.attrs.searchParameter}" styleClass="form-control input-sm"
+                            placeholder="#{comps['framework.crudTable.buscar']}" onblur="this.value = this.value.trim();"
+                            maxlength="100"/>
+                        <span class="input-group-btn">
+                            <h:commandButton id="searchLink" action="#{cc.attrs.actionForSearch}" styleClass="btn btn-sm btn-default"
+                                value="#{comps['framework.crudTable.buscar']}">
+                                <f:ajax execute="searchParamsInput" render="@this resultset paginator:componente #{cc.renderOnSearch}"/>
+                            </h:commandButton>
+                            <h:commandLink id="clearLink" action="#{cc.attrs.actionForClear}" styleClass="btn btn-sm btn-default">
+                                <i class="fa fa-eraser"></i> <span class="hidden-xs">#{comps['framework.crudTable.limpar']}</span>
+                                <f:ajax execute="searchParamsInput" render="@this resultset paginator:componente searchParamsInput #{cc.renderOnSearch}"/>
+                            </h:commandLink>
+                        </span>
+                    </div>
+                </ui:fragment>
+            </div>
+            <div class="col-xs-7 col-sm-6 col-md-5 col-lg-6 m-b-xs text-right">
+                <h:selectOneMenu id="pageSizeSelect" value="#{cc.pageSize}" styleClass="form-control input-sm input-s-md inline v-middle">
+                    <f:selectItems value="#{cc.pageSelectorList}" var="ps" itemValue="#{ps}" itemLabel="#{ps}"/>
+                </h:selectOneMenu>
+                <h:commandLink id="pageSizeDefine" action="#{cc.definePageSize()}" styleClass="btn btn-sm btn-default">
+                    <f:ajax execute="pageSizeSelect" render="@this resultset paginator:componente"/>
+                    #{comps['framework.crudTable.aplicar']}
+                </h:commandLink>
+            </div>
+        </div>
+
+        <h:panelGroup id="resultset" layout="block">
+            <div class="table-responsive">
+
+                <h:dataTable id="table" var="reg" value="#{cc.value}" 
+                    styleClass="table table-striped v-middle b-t b-light"
+                    columnClasses="#{cc.attrs.columnClasses}"
+                    rowClasses="#{cc.attrs.rowClasses}"
+                    rendered="#{cc.value.size() gt 0}">
+                    <cc:insertChildren/>
+                </h:dataTable>
+                <ui:fragment rendered="#{cc.value.size() eq 0}">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <p><h:outputText value="#{comps['framework.crudTable.nenhumregistro']}"/></p>
+                        </div>
+                    </div>
+                </ui:fragment> 
+
+            </div>
+        </h:panelGroup>
+
+        <footer class="panel-footer no-radius">
+            <bf:tablePaginator id="paginator" value="#{cc.value}" renderTarget=":#{cc.clientId}:resultset"/>
+        </footer>
+        <footer class="panel-footer clearfix">
+            <h:panelGroup id="footerWrapper" layout="block" styleClass="pull-right">
+                <ui:fragment rendered="#{!empty cc.facets.extraHeader}">
+                    <cc:renderFacet name="extraHeader"/>
+                </ui:fragment>
+
+                <ui:fragment rendered="#{cc.enableNew}">
+                    <ui:fragment rendered="#{!empty cc.attrs.scriptForNew}">
+                        <a href="#" class="btn btn-sm btn-default">
+                            <i class="fa fa-plus"></i> #{comps['framework.crudTable.novo']}
+                        </a>
+                    </ui:fragment>
+                    <h:commandLink id="footerNewLink" action="#{cc.attrs.actionForNew}" styleClass="btn btn-sm btn-default"
+                        rendered="#{!empty cc.attrs.actionForNew}">
+                        <i class="fa fa-plus"></i> #{comps['framework.crudTable.novo']}
+                    </h:commandLink>
+                </ui:fragment>
+
+                <h:commandLink id="footerRefreshLink" action="#{cc.attrs.actionForRefresh}" styleClass="btn btn-sm btn-default"
+                    rendered="#{!empty cc.attrs.actionForRefresh}">
+                    <f:ajax render="@this resultset #{cc.renderOnSearch}"/>
+                    <i class="fa fa-refresh"></i> #{comps['framework.crudTable.atualizar']}
+                </h:commandLink>
+            </h:panelGroup>
+        </footer>
+    </section>
+
+</h:panelGroup>
+</cc:implementation>
+
+</ui:composition>
